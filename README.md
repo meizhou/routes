@@ -5,7 +5,7 @@ routes
 
 类似于backbone里面的routes，不过功能没有那么强大，  
 因为开始设计时候只是想到路径能在网址栏显示就行了，  
-后端直接ajax返回html，append就行了；
+后端直接ajax返回html，append；
 
 支持浏览器历史history
 
@@ -49,4 +49,4 @@ routes
         RoutesAll = new Routes(options);
         RoutesAll.init();
     })
-    在function里面直接写个包含$.get的公共函数，把返回来的html append 感觉还是很方便的。
+    在function里面的直接写个包含$.get的公共函数，把返回来的html append
