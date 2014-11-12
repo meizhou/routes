@@ -43,9 +43,9 @@ seajs.use(['./routes'],function(Routes){
     }
     var RoutesAll;
     var options = {
-        indexRoutes:'#url1',
+        indexRoutes:'#url1',   //初始的执行url当路径没有#时，调用的函数
         routes:{
-            'url1':'url1',
+            'url1':'url1',     //herf:function(执行的func里面的function name)
             'url2':'url2',
             'url3':'url3',
             'url4':'url4'
