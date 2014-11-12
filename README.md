@@ -58,4 +58,5 @@ routes
         RoutesAll = new Routes(options);
         RoutesAll.init();
     })
-    在function里面的直接写个包含$.get的公共函数，把返回来的html append
+    在function里面的直接写个包含$.get的公共函数，把返回来的html append，
+    放在服务器上跑一下
