@@ -6,7 +6,7 @@ define("./routes",function (require, exports, module) {
     }
     Routes.defaults = {
         indexRoutes:'#index',  //首个要加载执行的函数
-        item:'a.ajax',         //jquery能判断的元素
+        item:'a.ajax',         //jquery能判断的元素,过滤元素
         routes:{},             //路径格式{href:functionName}
         func:{}                //执行函数{functionName:function(){}}
     }

@@ -5,35 +5,42 @@
     <script type="text/javascript" src="./lib/sea.js"></script>
     <script type="text/javascript" src="./lib/sea-config.js"></script>
     <title></title>
+    <style type="text/css">
+    .red{
+        color: red;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="span2">
-                <div class="sidebar">
-                    <ul>
-                        <li>
-                            <a href="#url1" class="ajax">请求url1</a>
-                        </li>
-                        <li>
-                            <a href="#url2" class="ajax">请求url2</a>
-                        </li>
-                        <li>
-                            <a href="#url3" class="ajax">请求url3</a>
-                        </li>
-                        <li>
-                            <a href="#url4" class="ajax">请求url4</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#url1" class="ajax">请求url1</a>
+                </li>
+                <li>
+                    <a href="#url2" class="ajax">请求url2</a>
+                </li>
+                <li>
+                    <a href="#url3" class="ajax">请求url3</a>
+                </li>
+                <li>
+                    <a href="#url4" class="ajax">请求url4</a>
+                </li>
+            </ul>
         </div>
+        <div id='content'></div>
     </div>
 </body>
 </html>
 
 <script type="text/javascript">
 seajs.use(['./routes'],function(Routes){
+    function getContent(url){
+        $.get(url,function(data){
+            $('#content').html(data);
+        })
+    }
     var RoutesAll;
     var options = {
         indexRoutes:'#url1',
@@ -46,15 +53,19 @@ seajs.use(['./routes'],function(Routes){
         func:{
             url1:function(){
                 console.log('url1');
+                getContent('./html/url1.html');
             },
             url2:function(){
                 console.log('url2');
+                getContent('./html/url2.html');
             },
             url3:function(){
                 console.log('url3');
+                getContent('./html/url3.html');
             },
             url4:function(){
                 console.log('url4');
+                getContent('./html/url4.html');
             }
         }
     }
