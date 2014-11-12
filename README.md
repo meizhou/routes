@@ -49,3 +49,4 @@ routes
         RoutesAll = new Routes(options);
         RoutesAll.init();
     })
+    在function里面直接写个包含$.get的公共函数，把返回来的html append 感觉还是很方便的。
